@@ -1,0 +1,72 @@
+<div>
+    <h2>Flights</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="flight.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Flight
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Tailno</span></th>
+                    <th><span>Pilotname</span></th>
+                    <th><span>Startlocx</span></th>
+                    <th><span>Startlocy</span></th>
+                    <th><span>Endlocx</span></th>
+                    <th><span>Endlocy</span></th>
+                    <th><span>Starttime</span></th>
+                    <th><span>Endtime</span></th>
+                    <th><span>Phone</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="flight in vm.flights track by flight.id">
+                    <td><a ui-sref="flight-detail({id:flight.id})">{{flight.id}}</a></td>
+                    <td>{{flight.tailno}}</td>
+                    <td>{{flight.pilotname}}</td>
+                    <td>{{flight.startlocx}}</td>
+                    <td>{{flight.startlocy}}</td>
+                    <td>{{flight.endlocx}}</td>
+                    <td>{{flight.endlocy}}</td>
+                    <td>{{flight.starttime | date:'medium'}}</td>
+                    <td>{{flight.endtime | date:'medium'}}</td>
+                    <td>{{flight.phone}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="flight-detail({id:flight.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="flight.edit({id:flight.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="flight.delete({id:flight.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>Flight</span> {{vm.flight.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Tailno</span></dt>
+        <dd>
+            <span>{{vm.flight.tailno}}</span>
+        </dd>
+        <dt><span>Pilotname</span></dt>
+        <dd>
+            <span>{{vm.flight.pilotname}}</span>
+        </dd>
+        <dt><span>Startlocx</span></dt>
+        <dd>
+            <span>{{vm.flight.startlocx}}</span>
+        </dd>
+        <dt><span>Startlocy</span></dt>
+        <dd>
+            <span>{{vm.flight.startlocy}}</span>
+        </dd>
+        <dt><span>Endlocx</span></dt>
+        <dd>
+            <span>{{vm.flight.endlocx}}</span>
+        </dd>
+        <dt><span>Endlocy</span></dt>
+        <dd>
+            <span>{{vm.flight.endlocy}}</span>
+        </dd>
+        <dt><span>Starttime</span></dt>
+        <dd>
+            <span>{{vm.flight.starttime | date:'medium'}}</span>
+        </dd>
+        <dt><span>Endtime</span></dt>
+        <dd>
+            <span>{{vm.flight.endtime | date:'medium'}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.flight.phone}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="flight-detail.edit({id:vm.flight.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>
