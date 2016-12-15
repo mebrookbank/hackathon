@@ -1,0 +1,12 @@
+version: '2'
+services:
+    mred-postgresql:
+        container_name: mred-postgresql
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/mred/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=mred
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
