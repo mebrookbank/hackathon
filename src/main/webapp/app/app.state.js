@@ -5,9 +5,13 @@
         .module('mredApp')
         .config(stateConfig);
 
-    stateConfig.$inject = ['$stateProvider'];
 
-    function stateConfig($stateProvider) {
+    stateConfig.$inject = ['$stateProvider', '$qProvider'];
+
+    function stateConfig($stateProvider, $qProvider) {
+
+        $qProvider.errorOnUnhandledRejections(false);
+
         $stateProvider.state('app', {
             abstract: true,
             views: {

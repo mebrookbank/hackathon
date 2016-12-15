@@ -14,11 +14,14 @@
             'ui.router',
             'infinite-scroll',
             // jhipster-needle-angularjs-add-module JHipster will add new module here
-            'angular-loading-bar'
+            'angular-loading-bar',
+            'openlayers-directive'
         ])
         .run(run);
 
+
     run.$inject = ['stateHandler'];
+
 
     function run(stateHandler) {
         stateHandler.initialize();
