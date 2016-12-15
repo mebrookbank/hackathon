@@ -26,8 +26,8 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:postgresql://localhost:5432/mred
         name:
-        username: mred
-        password:
+        username: postgres
+        password: postgres
     jpa:
         database-platform: com.hackathon.mred.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
