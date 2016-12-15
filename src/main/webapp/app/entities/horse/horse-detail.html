@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span>Horse</span> {{vm.horse.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Horsename</span></dt>
+        <dd>
+            <span>{{vm.horse.horsename}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.horse.phone}}</span>
+        </dd>
+        <dt><span>Ownername</span></dt>
+        <dd>
+            <span>{{vm.horse.ownername}}</span>
+        </dd>
+        <dt><span>Locationx</span></dt>
+        <dd>
+            <span>{{vm.horse.locationx}}</span>
+        </dd>
+        <dt><span>Locationy</span></dt>
+        <dd>
+            <span>{{vm.horse.locationy}}</span>
+        </dd>
+        <dt><span>Time</span></dt>
+        <dd>
+            <span>{{vm.horse.time | date:'medium'}}</span>
+        </dd>
+        <dt><span>Point</span></dt>
+        <dd>
+            <span>{{vm.horse.point}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="horse-detail.edit({id:vm.horse.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

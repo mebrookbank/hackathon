@@ -1,0 +1,108 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myHorseLabel">Create or edit a Horse</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.horse.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.horse.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_horsename">Horsename</label>
+            <input type="text" class="form-control" name="horsename" id="field_horsename"
+                    ng-model="vm.horse.horsename"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.horse.phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_ownername">Ownername</label>
+            <input type="text" class="form-control" name="ownername" id="field_ownername"
+                    ng-model="vm.horse.ownername"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_locationx">Locationx</label>
+            <input type="number" class="form-control" name="locationx" id="field_locationx"
+                    ng-model="vm.horse.locationx"
+                    required min="-180" max="180" />
+            <div ng-show="editForm.locationx.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.locationx.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.locationx.$error.min" translate-value-min="-180">
+                    This field should be more than -180.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.locationx.$error.max">
+                    This field cannot be more than 180.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.locationx.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_locationy">Locationy</label>
+            <input type="number" class="form-control" name="locationy" id="field_locationy"
+                    ng-model="vm.horse.locationy"
+                    required min="-90" max="90" />
+            <div ng-show="editForm.locationy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.locationy.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.locationy.$error.min" translate-value-min="-90">
+                    This field should be more than -90.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.locationy.$error.max">
+                    This field cannot be more than 90.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.locationy.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_time">Time</label>
+                <div class="input-group">
+                    <input id="field_time" type="text" class="form-control" name="time" datetime-picker="{{dateformat}}" ng-model="vm.horse.time" is-open="vm.datePickerOpenStatus.time"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('time')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_point">Point</label>
+            <input type="text" class="form-control" name="point" id="field_point"
+                    ng-model="vm.horse.point"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,53 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "horsename",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ownername",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "locationx",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "-180",
+            "fieldValidateRulesMax": "180"
+        },
+        {
+            "fieldName": "locationy",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "-90",
+            "fieldValidateRulesMax": "90"
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "point",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161215120523",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "horse",
+    "pagination": "no"
+}
