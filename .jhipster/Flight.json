@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "tailno",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pilotname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startlocx",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "startlocy",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "endlocx",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "endlocy",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "starttime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "endtime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161215152719",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "flight",
+    "pagination": "no"
+}

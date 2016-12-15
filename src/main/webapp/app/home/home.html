@@ -4,11 +4,20 @@
             <span class="hipster img-responsive img-rounded"></span>
         </div>
         <div class="col-md-8">
-            <h1>Welcome to Mr Ed</h1>
-            <h2>Multi-route Equine De-confliction</h2>
-            <h2>No neigh-sayers allowed.</h2>
-            <p class="lead">This is your stable page</p>
+            <h1>Mr<i>Ed</i> (Multi-route Equine De-confliction)</h1>
 
+            <p>Military aircraft will avoid over-flying horse riders if they
+can be identified in sufficient time, and if it is safe to do so.
+In particular, aircrew are trained to identify and avoid
+potential conflicts. However, conducting violent avoiding
+manoeuvres when close to riders significantly increases the
+potential for disturbance. So, if riders are seen late, military
+aircraft will usually over-fly without manoeuvring as this is
+the safest option</p>
+
+            <p>
+                Mr<i>Ed</i> automates this process leading to a safer experience all round.
+            </p>
             <div ng-switch="vm.isAuthenticated()">
                 <div class="alert alert-success" ng-switch-when="true">
                     You are logged in as user "{{vm.account.login}}".
@@ -21,13 +30,10 @@
                 <div class="alert alert-warning" ng-switch-when="false">
                     You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
                 </div>
+                <a style="border-radius: 4px;display:block;width:100%;font-size:50px;color:white;background-color:#424242;padding:10px" ng-href="#/flight">Register a Flight</a>
+                <a style="border-radius: 4px;display:block;margin-top:10px;width:100%;font-size:50px;color:white;background-color:brown;padding:10px" ng-href="#/horse">Register a Ride</a>  
+                <a style="border-radius: 4px;display:block;margin-top:10px;width:100%;font-size:50px;color:white;background-color:#ff2222;padding:10px" ng-href="#/deconfliction">De-conflict</a>           
             </div>
-            
-            <img src="/content/images/fr-ted-gif.gif" width="400" height="300"/>
-
-            <p>
-                Enjoy the ride!
-            </p>
             </p>
         </div>
     </div>
