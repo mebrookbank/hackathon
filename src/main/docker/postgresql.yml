@@ -6,7 +6,7 @@ services:
         # volumes:
         #     - ~/volumes/jhipster/mred/postgresql/:/var/lib/postgresql/
         environment:
-            - POSTGRES_USER=mred
-            - POSTGRES_PASSWORD=
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
         ports:
             - 5432:5432
