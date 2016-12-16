@@ -1,26 +1,28 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('mredApp')
-        .config(stateConfig, ['openlayers-directive']);
+  angular
+    .module('mredApp')
+    .config(stateConfig);
 
-    stateConfig.$inject = ['$stateProvider'];
+  stateConfig.$inject = ['$stateProvider'];
 
-    function stateConfig($stateProvider) {
-        $stateProvider.state('deconfliction', {
-            parent: 'app',
-            url: '/deconfliction',
-            data: {
-                authorities: ['ROLE_USER']
-            },
-            views: {
-                'content@': {
-                    templateUrl: 'app/deconfliction/deconfliction.html',
-                    controller: 'DeconflictionController',
-                    controllerAs: 'vm'
-                }
-            }
-        });
-    }
+  function stateConfig($stateProvider) {
+    $stateProvider.state('deconfliction', {
+      parent: 'app',
+      url: '/deconfliction',
+      data: {
+        authorities: [],
+        pageTitle: 'Deconfliction'
+      },
+      views: {
+        'content@': {
+          templateUrl: 'app/deconfliction/deconfliction.html',
+          controller: 'DeconflictionController',
+          controllerAs: 'vm'
+        }
+      },
+      resolve: {}
+    });
+  }
 })();
